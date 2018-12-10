@@ -7,9 +7,9 @@ namespace ModisAPI.Models
 {
     public class StudenteCorso
     {
-        public int StudenteID { get; set; }
+        public int StudenteId { get; set; }
         public Studente Studente { get; set; }
-        public int CorsoID { get; set; }
+        public int CorsoId { get; set; }
         public Corso Corso { get; set; }
     }
 }
