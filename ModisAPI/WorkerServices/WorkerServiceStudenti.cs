@@ -30,8 +30,8 @@ namespace ModisAPI.WorkerServices
 
         public void CancellaStudente(int id)
         {
-            //db.Entry(RestituisciStudente(id)).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
-            //db.SaveChanges();
+            db.Entry(RestituisciStudente(id)).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            db.SaveChanges();
         }
 
         public List<Studente> RestituisciListaStudenti()
