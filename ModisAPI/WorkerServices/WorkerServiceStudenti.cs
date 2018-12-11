@@ -24,7 +24,11 @@ namespace ModisAPI.WorkerServices
 
         public void ModificaStudente(Studente studenteModificato)
         {
-            db.Studenti.Update(studenteModificato);
+            //var studente = db.Studenti.Find(studenteModificato.Id);
+            //studente.Nome = studenteModificato.Nome;
+            //studente.Cognome = studenteModificato.Cognome;
+            //studente.Indirizzo = studenteModificato.Indirizzo;
+            db.Entry(studenteModificato).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             db.SaveChanges();
         }
 
