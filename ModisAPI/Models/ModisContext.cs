@@ -41,6 +41,7 @@ namespace ModisAPI.Models
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=ModisDB2;" +
                              "Trusted_Connection=True;ConnectRetryCount=0";
+            var conn =       @"Server=tcp:vitoserver.database.windows.net,1433;Initial Catalog=vitoDB;Persist Security Info=False;User ID=vito32;Password=@@VitoDB@@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             optionsBuilder.UseSqlServer(connection);
 

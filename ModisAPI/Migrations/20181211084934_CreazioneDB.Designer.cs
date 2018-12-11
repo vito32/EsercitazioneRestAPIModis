@@ -10,8 +10,8 @@ using ModisAPI.Models;
 namespace ModisAPI.Migrations
 {
     [DbContext(typeof(ModisContext))]
-    [Migration("20181210223320_CreazioneDatabase")]
-    partial class CreazioneDatabase
+    [Migration("20181211084934_CreazioneDB")]
+    partial class CreazioneDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
