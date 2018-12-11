@@ -24,22 +24,26 @@ namespace ModisAPI.WorkerServices
         {
             return db.Studenti.Where(x => x.Id == id).FirstOrDefault();
         }
-        
-    }
 
-    public class WorkerServiceOracleDb : IWorkerServiceStudenti
-    {
-        public List<Studente> RestituisciListaStudenti()
+        public void CreaStudente(Studente studente)
         {
-
-            throw new NotImplementedException();
-        }
-
-        public Studente RestituisciStudente(int id)
-        {
-            throw new NotImplementedException();
+            
         }
     }
+
+    //public class WorkerServiceOracleDb : IWorkerServiceStudenti
+    //{
+    //    public List<Studente> RestituisciListaStudenti()
+    //    {
+
+    //        throw new NotImplementedException();
+    //    }
+
+    //    public Studente RestituisciStudente(int id)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
 
     public class WorkerServiceStudenti : IWorkerServiceStudenti
     {
@@ -55,5 +59,9 @@ namespace ModisAPI.WorkerServices
             return RestituisciListaStudenti().Where(x => x.Id == id).FirstOrDefault();
         }
 
+        public void CreaStudente(Studente studente)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
