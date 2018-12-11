@@ -25,5 +25,7 @@ namespace ModisAPI.Models
         //    _soprannome = value;
         //}
 
+        public List<StudenteCorso> StudenteCorsi { get; set; }
+
     }
 }
