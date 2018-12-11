@@ -20,21 +20,18 @@ namespace ModisAPI.Controllers
             worker = _worker;
         }
 
-        // GET: api/Studenti
         [HttpGet]
         public IEnumerable<Studente> Get()
         {
             return worker.RestituisciListaStudenti();
         }
 
-        // GET: api/Studenti/5
         [HttpGet("{id}", Name = "Get")]
         public Studente Get(int id)
         {
             return worker.RestituisciStudente(id);
         }
 
-        // POST: api/Studenti
         [HttpPost]
         public void Post(Studente studente)
         {
@@ -42,8 +39,8 @@ namespace ModisAPI.Controllers
         }
 
         // PUT: api/Studenti/5
-        [HttpPut("{id}")]
-        public void Put(int id, Studente studenteModificato)
+        [HttpPut]
+        public void Put(Studente studenteModificato)
         {
             worker.ModificaStudente(studenteModificato);
         }
@@ -52,6 +49,7 @@ namespace ModisAPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            //worker.CancellaStudente(id);
         }
     }
 }
