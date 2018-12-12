@@ -21,7 +21,7 @@ namespace ModisAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Studente> Get()
+        public IEnumerable<ViewModelStudente> Get()
         {
             return worker.RestituisciListaStudenti();
         }
