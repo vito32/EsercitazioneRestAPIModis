@@ -43,15 +43,15 @@ namespace ModisAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseHttpsRedirection();
-                //app.UseMvc();
+                app.UseHttpsRedirection();
+                app.UseMvc();
 
-                //// Enable middleware to serve generated Swagger as a JSON endpoint.
-                //app.UseSwagger();
-                //app.UseSwaggerUI(c =>
-                //{
-                //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API v1");
-                //});
+                // Enable middleware to serve generated Swagger as a JSON endpoint.
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API v1");
+                });
             }
             else
             {
