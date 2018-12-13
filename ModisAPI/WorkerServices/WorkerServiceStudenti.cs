@@ -12,9 +12,9 @@ namespace ModisAPI.WorkerServices
     {
         private ModisContext db;
 
-        public WorkerServiceSQLServerDB()
+        public WorkerServiceSQLServerDB(ModisContext _db)
         {
-            db = new ModisContext();
+            db = _db;
         }
 
         public void CreaStudente(Studente studente)
@@ -45,7 +45,7 @@ namespace ModisAPI.WorkerServices
                 {
                     CorsoId = z.Corso.CorsoId,
                     Nome = z.Corso.Nome,
-                    DataDate = z.Corso.DataDate,
+                    DataInizio = z.Corso.DataInizio,
                     Livello = z.Corso.Livello,
                     DurataInOre = z.Corso.DurataInOre,
                     NumeroMassimoPartecipanti = z.Corso.NumeroMassimoPartecipanti

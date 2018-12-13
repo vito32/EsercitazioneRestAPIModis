@@ -25,7 +25,7 @@ namespace ModisAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataDate");
+                    b.Property<DateTime?>("DataInizio");
 
                     b.Property<int>("DurataInOre");
 

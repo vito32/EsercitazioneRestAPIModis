@@ -10,8 +10,8 @@ using ModisAPI.Models;
 namespace ModisAPI.Migrations
 {
     [DbContext(typeof(ModisContext))]
-    [Migration("20181211084934_CreazioneDB")]
-    partial class CreazioneDB
+    [Migration("20181213160522_migrazioneAzure2")]
+    partial class migrazioneAzure2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace ModisAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataDate");
+                    b.Property<DateTime?>("DataInizio");
 
                     b.Property<int>("DurataInOre");
 
@@ -49,6 +49,8 @@ namespace ModisAPI.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Cognome");
+
+                    b.Property<string>("Indirizzo");
 
                     b.Property<string>("Nome");
 
